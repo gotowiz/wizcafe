@@ -9,7 +9,7 @@
 body {
     margin:0;
     min-height:100vh;
-    font-family:Arial;
+    font-family:Arial, sans-serif;
     background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
                url("https://i.postimg.cc/BP3V7JPj/IMG-0397.jpg") no-repeat center center fixed;
     background-size:cover;
@@ -26,19 +26,16 @@ body {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* центрируем кнопки по горизонтали */
+    justify-content: center;
     background: rgba(0,0,0,0.65);
     padding: 30px;
     border-radius: 20px;
-    text-align: center;
     width: 90%;
     max-width: 400px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    animation: cardPop 1s ease-out;
-}
-
-@keyframes cardPop {
-    0% { transform: scale(0.8); opacity:0; }
-    100% { transform: scale(1); opacity:1; }
 }
 
 .avatar {
@@ -65,27 +62,27 @@ body {
 }
 
 .button {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    width:100%; /* Кнопки на всю ширину */
-    background:rgba(76,175,80,0.7); /* зелёный с прозрачностью */
-    color:white;
-    text-decoration:none;
-    padding:16px;
-    margin:10px 0; /* ровные отступы */
-    border-radius:12px;
-    font-size:18px;
-    transition:0.3s;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-    backdrop-filter: blur(4px); /* фон под кнопкой слегка размытый */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* текст и иконка по центру */
+    gap: 12px;
+    width: 100%; /* на всю ширину карточки */
+    padding: 16px;
+    margin: 10px 0;
+    border-radius: 12px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    background: rgba(76,175,80,0.7); /* зелёный с прозрачностью */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    backdrop-filter: blur(4px); /* слегка размытый фон под кнопкой */
 }
 
 .button:hover {
-    transform:scale(1.05);
-    background:rgba(76,175,80,0.9);
-    box-shadow:0 6px 15px rgba(0,0,0,0.4);
+    transform: scale(1.05);
+    background: rgba(76,175,80,0.9);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
 .icon {
@@ -126,7 +123,7 @@ SUPPORT
 </div>
 
 <script>
-// === Здесь меняешь ссылки кнопок ===
+// === Меняешь ссылки кнопок здесь ===
 let links = {
   operator: "https://t.me/wizccc",
   bot247: "https://t.me/pzwzbot",
